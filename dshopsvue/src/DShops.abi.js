@@ -1,5 +1,5 @@
 const contract = {
-  address: '0x534b707ac5674c2402dF4CaA4A6227A28743cF10',
+  address: '0x80305ECE4C5389ACBd21D029f43CcD35538f97CE',
   abi: [
     {
       constant: false,
