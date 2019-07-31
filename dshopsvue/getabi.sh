@@ -1,7 +1,7 @@
 #!/bin/bash
 ####################################
-JsonInputFile=$1
-BaseInputFileName=$(basename "$1")
+JsonInputFile='../DShops/build/contracts/DShops.json'
+BaseInputFileName='DShops'
 JsOutputFile=$(echo "$BaseInputFileName" | cut -f 1 -d '.')'.abi.js'
 line1='const contract = {'
 line2='address : '
@@ -15,7 +15,10 @@ line5='export default contract'
 echo $line2 $address &&
 echo $line3 $abi &&
 echo $line4 &&
-echo $line5) > $JsOutputFile
-echo "output to current dir : "$JsOutputFile
+echo $line5) > './src/'$JsOutputFile
+echo "Extracted Contract Address and ABI to ./src/DShops.abi.js"
+echo "Attemp to npx eslint --fix ./src/DShops.abi.js"
+npx eslint --fix ./src/DShops.abi.js
+
 
 
