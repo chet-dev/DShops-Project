@@ -1,0 +1,28 @@
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
+}
+
+$body-font-size: 1.2em;
+$primary: purple;
+$navbar-height: calculateRem(60px);
+
+
+@import '~bulmaswatch/pulse/_variables';
+
+$background: lighten($primary, 70);
+$tabs-link-active-color : black;
+
+@import '~bulma/bulma';
+
+@import '~bulmaswatch/pulse/_overrides';
+
+////////////////////////////////////////////////
+// BULMA CUSTOMIZATIONS
+////////////////////////////////////////////////
+
+
+// .modal-card-head, .modal-card-foot{
+//  background-color: $background;
+// }
+
