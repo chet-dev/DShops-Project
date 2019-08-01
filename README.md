@@ -155,7 +155,7 @@ $ ./getabi.sh
 ```
 A file named **DShops.abi.js** containing the contract address and ABI would be generated within the **src** subfolder. 
 
-    Note: You can also edit this DShops.abi.js to change the contract address later to the one I deployed to the Rinkeby Testnet, to test the same smart contract on Rinkeby. 
+Note: You can also edit this DShops.abi.js to change the [contract address](DShops-On-Rinkeby-Test-Network) later to the one I deployed to the Rinkeby Testnet, to test the same smart contract on Rinkeby. 
 
 #### Step 4
 
@@ -164,4 +164,8 @@ You can now build the web app. The build process should complete successfully, a
 ```
 $ npm run serve
 ```
+&nbsp;
 
+## DShops On Rinkeby Test Network
+
+The DShops smart contract was also deployed on the **Rinkeby Test Network**. This contract is also **verified on Etherscan**. The contract address is [0x5Df9F7A207F70e2dd6Ee392f9b3EF7E93Ab8A800](https://rinkeby.etherscan.io/address/0x5Df9F7A207F70e2dd6Ee392f9b3EF7E93Ab8A800#code)
