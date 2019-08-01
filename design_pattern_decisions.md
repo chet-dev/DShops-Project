@@ -29,3 +29,27 @@ The withdrawal pattern is a better way in terms of security, costs and complexit
 One failed transaction could stop other store owners from getting the funds, if the contract send the funds directly to all the store owners.
 
 Sending the funds directly to a recipient should be avoided, as a contract does not know whether the recipient is a malicious contract that is designed to reject the funds sent to it.
+
+In the DShops smart contract, the withdrawal pattern is implemented.
+
+```
+ function withdrawBalanceFromStorefront(bytes32 storefrontUniqueId)
+        public
+        whenNotPaused
+        returns (bool success)
+    {
+        require(storefrontExists(storefrontUniqueId), "Storefront does not exist!");
+        require(
+            msg.sender == storefronts[storefrontUniqueId].storeOwner,
+            "Must be the owner to withdraw balance!"
+        );
+        uint256 balanceToWithdraw = storefronts[storefrontUniqueId].balance;
+        require(balanceToWithdraw > 0, "The balance must be more than zero to withdraw!");
+        storefronts[storefrontUniqueId].balance = (storefronts[storefrontUniqueId].balance).sub(
+            balanceToWithdraw
+        );
+        emit LogWithdrawBalanceFromStorefront(storefrontUniqueId);
+        msg.sender.transfer(balanceToWithdraw); // transfer balance back to store owner
+        return true;
+    }
+```
