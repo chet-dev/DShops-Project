@@ -24,4 +24,27 @@ However, in general, the withdrawal pattern could be susceptible to the Contanti
 
 The DShops contract is not in danger, as the withdrawal function and the rest of the functions in the contract do not meet the preconditions outlined above.
 
-The withdrawal function in the contract also uses the Checks-Effects-Interactions pattern.
+The withdrawal function in the contract also uses the Checks-Effects-Interactions pattern - "Checks first, after that effects to state variables and interactions last"
+
+&nbsp;
+
+## Integer Overflow and Underflow
+
+### Overflow
+
+If a uint is being added without limit, it would reach the maximum uint value (2^256) and will circle back to zero.
+
+### Underflow
+
+If a uint is made to be less than zero, it will cause an underflow and get set to its maximum value. 
+
+Obviously, we do not want any overflows or underflows to happen in our contract. The DShop contract is using the OpenZeppelin SafeMath to do all the basic arithmetics, to mitigate the risks of overflow and underflow.
+
+&nbsp;
+
+## DoS with (Unexpected) revert
+
+Excerpt taken from [Known Attacks
+](https://consensys.github.io/smart-contract-best-practices/known_attacks/#dos-with-unexpected-revert)"... example is when a contract may iterate through an array to pay users (e.g., supporters in a crowdfunding contract). It's common to want to make sure that each payment succeeds. If not, one should revert. The issue is that if one call fails, you are reverting the whole payout system, meaning the loop will never complete. No one gets paid because one address is forcing an error."
+
+The above situation is similar to sending the storefront balance to the store owners in one goal. The DShops is using the Withdrawal Pattern, favoring Pull over Push payments.
