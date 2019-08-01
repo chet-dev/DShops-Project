@@ -55,6 +55,7 @@ Note: You can also see the [verified smart contract](#DShops-on-Rinkeby-Test-Net
 
 **dshopsvue** is a Vue JS project which contains all the frontend codes that interacts with the smart contract using web3.js and a Dapp browser such as MetaMask. You can start a development webserver and run this web app from this folder.
 
+Note: You can also try out the [live web app](#DShops-Frontend-is-Live-on-Firebase) on Firebase.
 
 ### Recommended Requirements
 
@@ -180,7 +181,7 @@ The DShops smart contract was also deployed on the **Rinkeby Test Network**. Thi
 
 ## DShops Frontend is Live on Firebase
 
-You can test run web app on Firebase. Please check out the [know issues](#Known-Issues) as well.
+You can test run the web app on Firebase. Please check out the [know issues](#Known-Issues) as well.
 
 [http://dshops-eth.firebaseapp.com](http://dshops-eth.firebaseapp.com)
 
