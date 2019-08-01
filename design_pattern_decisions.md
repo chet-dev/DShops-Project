@@ -1,0 +1,1 @@
+describe at least 2 design patterns implemented in the project
