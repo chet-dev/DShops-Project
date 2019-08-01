@@ -128,7 +128,7 @@ The migration should run and the contract would be compiled and deployed success
 
 ### Test The Frontend Web App in dshopsvue subfolder
 
-Please complete the steps in [**Test The Smart Contract in DShops subfolder**](Test-The-Smart-Contract-in-DShops-subfolder) first, before following the steps below.
+Please complete the steps in [**Test The Smart Contract in DShops subfolder**](#Test-The-Smart-Contract-in-DShops-subfolder) first, before following the steps below.
 
 #### Step 1
 
@@ -155,7 +155,7 @@ $ ./getabi.sh
 ```
 A file named **DShops.abi.js** containing the contract address and ABI would be generated within the **src** subfolder. 
 
-Note: You can also edit this DShops.abi.js to change the [contract address](DShops-On-Rinkeby-Test-Network) later to the one I deployed to the Rinkeby Testnet, to test the same smart contract on Rinkeby. 
+Note: You can also edit this DShops.abi.js to change the [contract address](#DShops-On-Rinkeby-Test-Network) later to the one I deployed to the Rinkeby Testnet, to test the same smart contract on Rinkeby. 
 
 #### Step 4
 
