@@ -24,9 +24,10 @@ This mapping iteration design pattern is a subset of the larger implementation o
 
 ## Withdrawl Pattern
 
-In our smart contract, a store owner can withdraw his/her storefront's balance (collected sales). Instead of sending the funds from the contract to the store owners, the contract implements the withdrawal pattern, where the store owner is responsible for withdrawing the balance. The store owner has to initiate or send a transaction in order to withdraw the funds into his/her account.
+In our smart contract, a store owner can withdraw his/her storefront's balance (collected sales). Instead of sending the funds from the contract to the store owners, the DShops smart contract implements the withdrawal pattern, where the store owner is responsible for withdrawing the balance. The store owner has to initiate or send a transaction in order to withdraw the funds into his/her account.
 
 The withdrawal pattern is a better way in terms of security, costs and complexity compared to sending the funds to all store owners at once, as the contract does not have to handle the situations when the sending of funds fail.
+
 One failed transaction could stop other store owners from getting the funds, if the contract send the funds directly to all the store owners.
 
 Sending the funds directly to a recipient should be avoided, as a contract does not know whether the recipient is a malicious contract that is designed to reject the funds sent to it.
