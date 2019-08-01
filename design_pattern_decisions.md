@@ -20,7 +20,7 @@ In the contract, we have a function getProductsCount() to get the length of the 
 This mapping iteration design pattern is a subset of the larger implementation of the Solidity CRUD by Rob Hitchens (https://medium.com/robhitchens/solidity-crud-part-1-824ffa69509a), which is also implemented in this project.
 
 
-## Withdrawl Pattern
+## Withdrawal Pattern
 
 In our smart contract, a store owner can withdraw his/her storefront's balance (collected sales). Instead of sending the funds from the contract to the store owners, the DShops smart contract implements the withdrawal pattern, where the store owner is responsible for withdrawing the balance. The store owner has to initiate or send a transaction in order to withdraw the funds into his/her account.
 
