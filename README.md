@@ -123,3 +123,45 @@ Run the truffle migrate to generate the contract artifacts.
 $ truffle migrate
 ```
 The migration should run and the contract would be compiled and deployed successully in your ganache instance. You should see a build folder generated. Our frontend web app would require the artifacts generated in this build folder. Now you are ready to set up for the frontend web app.
+
+&nbsp;
+
+### Test The Frontend Web App in dshopsvue subfolder
+
+Please complete the steps in [**Test The Smart Contract in DShops subfolder**](Test-The-Smart-Contract-in-DShops-subfolder) first, before following the steps below.
+
+#### Step 1
+
+From the subfolder DShops, go into the dshopsvue subfolder. 
+
+```
+$ cd ../dshopsvue
+```
+
+#### Step 2
+
+Npm install all the required packages locally.
+
+```
+$ npm install
+```
+
+#### Step 3
+
+Run a script to help you to extract the deployed contract address and ABI from the DShops build folder into the **src** subfolder of your current directory.
+
+```
+$ ./getabi.sh
+```
+A file named **DShops.abi.js** containing the contract address and ABI would be generated within the **src** subfolder. 
+
+    Note: You can also edit this DShops.abi.js to change the contract address later to the one I deployed to the Rinkeby Testnet, to test the same smart contract on Rinkeby. 
+
+#### Step 4
+
+You can now build the web app. The build process should complete successfully, and a development webserver should start automatically to serve the web app. It would provide you the links and port numbers for you to test the web app locally, using your web browser.
+
+```
+$ npm run serve
+```
+
