@@ -44,5 +44,82 @@ This web app is not of production quality and it relies on the web3.js (web3@1.0
 
 ## How To Set Up The Project For Local Testing
 
-The **DShops-Project** contains two main subfolders, DShops and dshopsvue.
+The **DShops-Project** contains two main subfolders, **DShops** and **dshopsvue**.
 
+**DShops** is a truffle project which contains the DShops.sol Solidity smart contract. You can run truffle test, migrate and compile within this folder.
+
+**dshopsvue** is a Vue JS project which contains all the frontend codes that interacts with the smart contract using web3.js and a Dapp browser such as MetaMask. You can start a development webserver and run this web app from this folder.
+
+### Recommended Requirements
+
++ You should be running a linux virtual machine, I am using Ubuntu 19.04 within a VM (Parallels for Mac)
+
++ You should be using the node package manager NPM
+
++ You should have [**ganace-cli**](https://github.com/trufflesuite/ganache-cli) installed
+
++ You will need a Dapp browser. I am using MetaMask.
+
+&nbsp;
+
+### Test The Smart Contract in DShops subfolder
+
+#### Step 1
+
+Clone this github repo.
+
+```
+$ git clone https://github.com/chet-dev/DShops-Project.git
+```
+
+### Step 2
+
+Go into the main project folder.
+```
+$ cd DShops-Project
+```
+
+You will see the two subfolders DShops and dshopsvue.
+
+### Step 3
+
+Go into the DShops folder
+
+```
+$ cd DShops
+```
+
+### Step 4
+
+Npm install the required packages locally.
+
+```
+$ npm install
+```
+
+### Step 5
+
+Run your ganache-cli
+
+```
+$ ganache-cli
+```
+
+### Step 6
+
+Run the truffle test
+
+```
+$ truffle test
+```
+
+The tests should run and you will see they will all pass.
+
+### Step 7
+
+Run the truffle migrate to generate the contract artifacts.
+
+```
+$ truffle migrate
+```
+The migration should run and the contract would be compiled and deployed successully in your ganache instance. You should see a build folder generated. Our frontend web app would require the artifacts generated in this build folder. Now you are ready to set up for the frontend web app.
