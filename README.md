@@ -55,6 +55,7 @@ Note: You can also see the [verified smart contract](#DShops-on-Rinkeby-Test-Net
 
 **dshopsvue** is a Vue JS project which contains all the frontend codes that interacts with the smart contract using web3.js and a Dapp browser such as MetaMask. You can start a development webserver and run this web app from this folder.
 
+
 ### Recommended Requirements
 
 + You should be running a linux virtual machine, I am using Ubuntu 19.04 within a VM (Parallels for Mac)
