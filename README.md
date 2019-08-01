@@ -1,5 +1,7 @@
 # DShops-Project
 
+<p align="center"><img src="https://dshops-eth.firebaseapp.com/img/logo.1fb9f0b5.png"/></p>
+
 ### DShops is an online marketplace that operates on the blockchain.
 
 **Shoppers** can browse a master list of products or view products by storefronts to buy products posted by the **Store Owners** using cryptocurrency (ETH).
@@ -7,6 +9,7 @@
 Anyone with a wallet address can apply to become a **Store Owner**. It is up to the **Admin** to approve the application.
 
 This marketplace can be managed by a group of administrators (**Admins**). **Store Owners** can manage their products and storefront's balance.
+
 
 ## User Stories
 
@@ -47,6 +50,8 @@ This web app is not of production quality and it relies on the web3.js (web3@1.0
 The **DShops-Project** contains two main subfolders, **DShops** and **dshopsvue**.
 
 **DShops** is a truffle project which contains the DShops.sol Solidity smart contract. You can run truffle test, migrate and compile within this folder.
+
+Note: You can also see the [verified smart contract](#DShops-on-Rinkeby-Test-Network) on Etherscan
 
 **dshopsvue** is a Vue JS project which contains all the frontend codes that interacts with the smart contract using web3.js and a Dapp browser such as MetaMask. You can start a development webserver and run this web app from this folder.
 
@@ -155,7 +160,7 @@ $ ./getabi.sh
 ```
 A file named **DShops.abi.js** containing the contract address and ABI would be generated within the **src** subfolder. 
 
-Note: You can also edit this DShops.abi.js to change the [contract address](#DShops-On-Rinkeby-Test-Network) later to the one I deployed to the Rinkeby Testnet, to test the same smart contract on Rinkeby. 
+Note: You can also edit this DShops.abi.js to change the [contract address](#DShops-on-Rinkeby-Test-Network) later to the one I deployed to the Rinkeby Testnet, to test the same smart contract on Rinkeby. 
 
 #### Step 4
 
@@ -166,6 +171,18 @@ $ npm run serve
 ```
 &nbsp;
 
-## DShops On Rinkeby Test Network
+## DShops on Rinkeby Test Network
 
 The DShops smart contract was also deployed on the **Rinkeby Test Network**. This contract is also **verified on Etherscan**. The contract address is [0x5Df9F7A207F70e2dd6Ee392f9b3EF7E93Ab8A800](https://rinkeby.etherscan.io/address/0x5Df9F7A207F70e2dd6Ee392f9b3EF7E93Ab8A800#code)
+
+&nbsp;
+
+## DShops Frontend is Live on Firebase
+
+You can test run web app on Firebase. Please check out the [know issues](#Known-Issues) as well.
+
+[http://dshops-eth.firebaseapp.com](http://dshops-eth.firebaseapp.com)
+
+There is also a demo video of this project on YouTube.
+
+[https://youtu.be/TPgQgAMCCuc](https://youtu.be/TPgQgAMCCuc)
