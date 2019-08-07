@@ -158,9 +158,11 @@ $ npm install
 
 #### Step 3
 
-Run a script to help you to extract the deployed contract address and ABI from the DShops build folder into the **src** subfolder of your current directory.
+Run a script to help you to extract the deployed contract address and ABI from the DShops build folder into the **src** subfolder of your current directory. Before running the script, you need to install **'jq'** first. For more information on the 'jq' command, please visit [https://stedolan.github.io/jq/download/](https://stedolan.github.io/jq/download/)
 
 ```
+$ sudo apt-get install jq
+
 $ ./getabi.sh
 ```
 A file named **DShops.abi.js** containing the contract address and ABI would be generated within the **src** subfolder. 
